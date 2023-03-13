@@ -4,8 +4,10 @@ import Reviews from "school-landing-page/pages/Reviews";
 
 test("Reviews", () => {
   render(<Reviews />);
-  const rev = screen.getByText(/Elon Musk/i);
+
+  const box = screen.getByTestId("box");
   const text = screen.getByText(/Say About Us/i);
+
   expect(text).toBeInTheDocument();
-  expect(rev).toBeInTheDocument();
+  expect(box).toHaveStyle({ scrollSnapType: "x mandatory" });
 });
