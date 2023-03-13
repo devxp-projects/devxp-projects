@@ -4,11 +4,9 @@ import Footer from "school-landing-page/pages/Footer";
 
 test("Footer", () => {
   render(<Footer />);
-
   const mainBox = screen.getByTestId("mainBox");
   const signupBox = screen.getByTestId("signupBox");
   const emailSignup = screen.getByText(/Subscribe to get latest updates/i);
-
   expect(emailSignup).toBeInTheDocument();
   expect(signupBox).toHaveStyle({
     position: "relative",

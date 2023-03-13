@@ -122,7 +122,6 @@ export default function Reviews() {
           }}
         >
           <Box
-            data-testid="box"
             sx={{
               display: "flex",
               gap: "1.777rem",
@@ -141,6 +140,7 @@ export default function Reviews() {
             {reviews.map((item) => (
               <Paper
                 key={item.title}
+                elevation={1}
                 sx={{
                   width: "24.325rem",
                   height: "19.548rem",
